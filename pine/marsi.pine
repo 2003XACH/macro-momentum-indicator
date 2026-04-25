@@ -61,10 +61,10 @@ colorRsiLine = switch
     rsiValue <= osLevel => color.new(color.green, 0)
     =>                     color.new(color.blue,  0)
 
-bgColorRaw = switch regime
-     1 => color.new(color.green, 88)
-    -1 => color.new(color.red,   88)
-    =>   color.new(color.gray,   92)
+bgColorRaw = switch
+    regime ==  1 => color.new(color.green, 88)
+    regime == -1 => color.new(color.red,   88)
+    =>              color.new(color.gray,  92)
 
 bgColor = rateHiking ? color.new(color.orange, 85) : bgColorRaw
 
@@ -88,15 +88,15 @@ fill(osPlot, midPlot, top_value=50, bottom_value=0,
      title="Oversold Zone Fill")
 
 // ─── REGIME LABELS ───────────────────────────────────────────────────────────
-regimeLabel = switch regime
-     1 => "Risk-ON  ▲"
-    -1 => "Risk-OFF ▼"
-    =>    "Neutral  ●"
+regimeLabel = switch
+    regime ==  1 => "Risk-ON  ▲"
+    regime == -1 => "Risk-OFF ▼"
+    =>              "Neutral  ●"
 
-regimeLabelColor = switch regime
-     1 => color.new(color.green, 0)
-    -1 => color.new(color.red,   0)
-    =>   color.new(color.gray,   0)
+regimeLabelColor = switch
+    regime ==  1 => color.new(color.green, 0)
+    regime == -1 => color.new(color.red,   0)
+    =>              color.new(color.gray,  0)
 
 if showLabels and barstate.islast
     label.new(bar_index, rsiValue,
@@ -131,7 +131,7 @@ if barstate.islast
     table.cell(dash, 0, 1, "RSI",    text_color=color.silver, text_size=size.small)
     table.cell(dash, 1, 1, str.tostring(math.round(rsiValue, 1)), text_color=colorRsiLine, text_size=size.small)
 
-    vixColor = vixClose > vixHigh ? color.new(color.red, 0) : vixClose < vixLow ? color.new(color.green, 0) : color.white
+    vixColor = vixClose > vixHigh ? color.new(color.red, 0) : vixClose < vixLow ? color.new(color.green, 0) : color.new(color.white, 0)
     table.cell(dash, 0, 2, "VIX",    text_color=color.silver, text_size=size.small)
     table.cell(dash, 1, 2, str.tostring(math.round(vixClose, 2)), text_color=vixColor, text_size=size.small)
 
