@@ -11,7 +11,7 @@
 //  Risk-OFF   VIX > 25  AND DXY rising    60 / 40
 
 //@version=6
-indicator(title="MARSI — Macro-Adjusted RSI", shorttitle="MARSI", overlay=false, timeframe="", timeframe_gaps=true)
+indicator(title="MARSI — Macro-Adjusted RSI", shorttitle="MARSI", overlay=false)
 
 // ─── INPUTS ─────────────────────────────────────────────────────────────────
 rsiLength     = input.int(14,    "RSI Length",          minval=2)
