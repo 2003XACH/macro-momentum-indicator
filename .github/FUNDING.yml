@@ -1,0 +1,7 @@
+# GitHub Funding configuration
+# Tells GitHub to show the "Sponsor" button pointing to your Open Collective page.
+# Replace YOUR_OC_SLUG with the slug you choose when creating your Open Collective project.
+# Example: if your page is opencollective.com/macro-momentum-indicator
+#          then the slug is: macro-momentum-indicator
+
+open_collective: macro-momentum-indicator
