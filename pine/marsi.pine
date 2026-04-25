@@ -1,6 +1,6 @@
 // This source code is subject to the terms of the Mozilla Public License 2.0
 // © MARSI — Macro-Adjusted RSI Indicator
-// https://github.com/YOUR_USERNAME/macro-momentum-indicator
+// https://github.com/2003XACH/macro-momentum-indicator
 //
 // Combines classic RSI with a live macro regime detector (VIX + DXY)
 // to dynamically shift overbought/oversold thresholds based on market stress.
