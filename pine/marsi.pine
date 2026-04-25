@@ -54,9 +54,9 @@ rsiValue = ta.rsi(rsiSource, rsiLength)
 rateHiking = showMacroRate and not na(usIntr) and usIntr > usIntr[1]
 
 // ─── COLOURS ─────────────────────────────────────────────────────────────────
-colorRsiLine  = rsiValue >= obLevel ? color.red :
-                rsiValue <= osLevel ? color.green :
-                color.new(color.blue, 0)
+colorRsiLine  = rsiValue >= obLevel ? color.new(color.red,   0) :
+                rsiValue <= osLevel ? color.new(color.green, 0) :
+                                      color.new(color.blue,  0)
 
 bgColorRaw    = regime ==  1 ? color.new(color.green, 88) :
                 regime == -1 ? color.new(color.red,   88) :
